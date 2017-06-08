@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="Mafesa_WS">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="Mafesa_Spring.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Mafesa_Spring/Mafesa_Spring">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="Mafesa_WS"/>
+        <property name="java-output-path" value="/Mafesa_WS/build/classes"/>
+    </wb-module>
+</project-modules>
