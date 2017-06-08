@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd">
+
+<!-- DataSource con los datos de conexión a la bd -->		
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+		<property name="url" value="jdbc:mysql://localhost:3306/mafesa"></property>
+		<property name="username" value="admin"></property>
+		<property name="password" value="admin"></property>
+	</bean>
+	
+	<bean name="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="mappingResources">
+			<list>
+				<value>co/mafesa/dao/mapping/Cliente.hbm.xml</value>
+				<value>co/mafesa/dao/mapping/Usuario.hbm.xml</value>
+				<value>co/mafesa/dao/mapping/Servicio.hbm.xml</value>
+				<value>co/mafesa/dao/mapping/OrdenCompra.hbm.xml</value>
+				<value>co/mafesa/dao/mapping/DetalleOrdenCompra.hbm.xml</value>
+				<value>co/mafesa/dao/mapping/EstadoOC.hbm.xml</value>
+				<value>co/mafesa/dao/mapping/Estado.hbm.xml</value>
+				<value>co/mafesa/dao/mapping/Factura.hbm.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="javax.persistence.validation.mode">none</prop>
+			</props>
+		</property>
+		
+	</bean>
+	
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	
+	
+	<bean name="clienteDao" class="co.mafesa.dao.hibernate.ClienteDAOHibernate">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean name="usuarioDao" class="co.mafesa.dao.hibernate.UsuarioDAOHibernate">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean name="rolDao" class="co.mafesa.dao.hibernate.RolDAOHibernate">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean name="servicioDao" class="co.mafesa.dao.hibernate.ServicioDAOHibernate">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean name="ordenCompraDao" class="co.mafesa.dao.hibernate.OrdenCompraDAOHibernate">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean name="detalleOrdenCompraDao" class="co.mafesa.dao.hibernate.DetalleOrdenCompraDAOHibernate">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean name="estadoOCDao" class="co.mafesa.dao.hibernate.EstadoOCDAOHibernate">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean name="estadoDao" class="co.mafesa.dao.hibernate.EstadoDAOHibernate">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean name="facturaDao" class="co.mafesa.dao.hibernate.FacturaDAOHibernate">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean name="clienteBL" class="co.mafesa.bl.impl.ClienteBLImpl">
+		<property name="clienteDAO"  ref="clienteDao"></property>
+	</bean>
+	
+	<bean name="RolBL" class="co.mafesa.bl.impl.RolBLImpl">
+		<property name="rolDAO"  ref="rolDao"></property>
+	</bean>
+	
+	<bean name="usuarioBL" class="co.mafesa.bl.impl.UsuarioBLImpl">
+		<property name="usuarioDAO"  ref="usuarioDao"></property>		
+		<property name="clienteDAO"  ref="clienteDao"></property>
+	</bean>
+	
+	<bean name="servicioBL" class="co.mafesa.bl.impl.ServicioBLImpl">
+		<property name="servicioDAO"  ref="servicioDao"></property>
+	</bean>
+	
+	<bean name="ordenCompraBL" class="co.mafesa.bl.impl.OrdenCompraBLImpl">
+		<property name="usuarioDAO"  ref="usuarioDao"></property>		
+		<property name="clienteDAO"  ref="clienteDao"></property>
+		<property name="ordenCompraDAO"  ref="ordenCompraDao"></property>
+		<property name="estadoOCDAO"  ref="estadoOCDao"></property>
+	</bean>
+	
+	<bean name="detalleOrdenCompraBL" class="co.mafesa.bl.impl.DetalleOrdenCompraBLImpl">
+		<property name="ordenCompraDAO"  ref="ordenCompraDao"></property>		
+		<property name="servicioDAO"  ref="servicioDao"></property>
+		<property name="detalleOrdenCompraDAO"  ref="detalleOrdenCompraDao"></property>
+	</bean>
+	
+	<bean name="estadoOCBL" class="co.mafesa.bl.impl.EstadoOCBLImpl">
+		<property name="estadoDAO"  ref="estadoDao"></property>		
+		<property name="usuarioDAO"  ref="usuarioDao"></property>
+		<property name="ordenCompraDAO"  ref="ordenCompraDao"></property>
+		<property name="estadoOCDAO"  ref="estadoOCDao"></property>
+	</bean>
+	
+	<bean name="facturaBL" class="co.mafesa.bl.impl.FacturaBLImpl">
+		<property name="facturaDAO"  ref="facturaDao"></property>		
+		<property name="ordenCompraDAO"  ref="ordenCompraDao"></property>
+	</bean>
+	
+	<context:component-scan base-package="co.mafesa.rest"></context:component-scan>
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	
+</beans>

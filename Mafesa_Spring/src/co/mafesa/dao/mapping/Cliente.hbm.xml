@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 5/05/2017 09:33:13 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="co.mafesa.dto.Cliente" table="clientes">
+        <id name="codigoCliente" type="java.lang.String">
+            <column name="CODIGOCLIENTE" length="15" />
+            <generator class="assigned" />
+        </id>
+        
+        <property name="id" type="java.lang.String">
+            <column name="NUMEROIDENTIFICACION" length="15" not-null="true"/>
+        </property>
+        
+        <property name="tipoId" type="java.lang.String">
+            <column name="TIPOID" length="3" not-null="true"/>
+        </property>
+        <property name="razonSocial" type="java.lang.String">
+            <column name="RAZONSOCIAL" length="30" not-null="true"/>
+        </property>
+        <property name="direccion" type="java.lang.String">
+            <column name="DIRECCION" length="30" not-null="true"/>
+        </property>
+        <property name="telefono" type="java.lang.String">
+            <column name="TELEFONO" length="10" not-null="true"/>
+        </property>
+        <property name="email" type="java.lang.String">
+            <column name="EMAIL" length="30" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

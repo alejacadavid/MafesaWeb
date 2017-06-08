@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 6/05/2017 04:30:30 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="co.mafesa.dto.EstadoOC" table="estado_orden_compra">
+        <id name="numero" type="int">
+            <column name="NUMERO" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="estado" class="co.mafesa.dto.Estado" fetch="join">
+            <column name="ESTADO" />
+        </many-to-one>
+        <many-to-one name="usuarioEstado" class="co.mafesa.dto.Usuario" fetch="join">
+            <column name="USUARIOESTADO" />
+        </many-to-one>
+        
+        <property name="cantidadPendiente" type="int">
+            <column name="CANTIDADPENDIENTE" />
+        </property>
+        <property name="cantidadProcesada" type="int">
+            <column name="CANTIDADPROCESADA" />
+        </property>
+        <property name="fechaEstado" type="java.util.Date">
+            <column name="FECHAESTADO" />
+        </property>
+        <many-to-one name="idOrdenCompra" class="co.mafesa.dto.OrdenCompra" fetch="join">
+            <column name="IDORDENCOMPRA" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

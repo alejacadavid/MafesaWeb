@@ -1,0 +1,302 @@
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5ebec15, org.springframework.test.context.support.DirtiesContextTestExecutionListener@21bcffb5, org.springframework.test.context.transaction.TransactionalTestExecutionListener@380fb434, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@668bc3d5]
+Loading XML bean definitions from class path resource [configuracion.xml]
+Refreshing org.springframework.context.support.GenericApplicationContext@6276ae34: startup date [Wed May 17 15:00:24 COT 2017]; root of context hierarchy
+Loaded JDBC driver: com.mysql.jdbc.Driver
+Hibernate Commons Annotations 3.2.0.Final
+Hibernate 3.6.10.Final
+hibernate.properties not found
+Bytecode provider name : javassist
+using JDK 1.4 java.sql.Timestamp handling
+recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+Mapping class: co.mafesa.dto.Cliente -> clientes
+Mapping class: co.mafesa.dto.Usuario -> usuarios
+Hibernate Validator not found: ignoring
+Building new Hibernate SessionFactory
+Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+Using dialect: org.hibernate.dialect.MySQLDialect
+Database ->
+       name : MySQL
+    version : 5.7.14
+      major : 5
+      minor : 7
+Driver ->
+       name : MySQL-AB JDBC Driver
+    version : mysql-connector-java-5.1.22 ( Revision: ${bzr.revision-id} )
+      major : 5
+      minor : 1
+Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+Automatic flush during beforeCompletion(): disabled
+Automatic session close at end of transaction: disabled
+JDBC batch size: 15
+JDBC batch updates for versioned data: disabled
+Scrollable result sets: enabled
+JDBC3 getGeneratedKeys(): enabled
+Connection release mode: auto
+Maximum outer join fetch depth: 2
+Default batch fetch size: 1
+Generate SQL with comments: disabled
+Order SQL updates by primary key: disabled
+Order SQL inserts for batching: disabled
+Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+Using ASTQueryTranslatorFactory
+Query language substitutions: {}
+JPA-QL strict compliance: disabled
+Second-level cache: enabled
+Query cache: disabled
+Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+Optimize cache for minimal puts: disabled
+Structured second-level cache entries: disabled
+Echoing all SQL to stdout
+Statistics: disabled
+Deleted entity synthetic identifier rollback: disabled
+Default entity-mode: pojo
+Named query checking : enabled
+Check Nullability in Core (should be disabled when Bean Validation is on): disabled
+building session factory
+Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@65f8f5ae
+Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@431cd9b2
+Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@38467116
+Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@5b7a7f33
+Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@790da477
+Type registration [blob] overrides previous : org.hibernate.type.BlobType@5c7933ad
+Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@5c7933ad
+Type registration [clob] overrides previous : org.hibernate.type.ClobType@57bc27f5
+Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@57bc27f5
+Not binding factory to JNDI, no JNDI name configured
+Began transaction (1) for test context [DefaultTestContext@2796aeae testClass = ClienteBLImplTest, testInstance = co.mafesa.bl.impl.ClienteBLImplTest@b4711e2, testMethod = testObtener@ClienteBLImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1fa1cab1 testClass = ClienteBLImplTest, locations = '{classpath:configuracion.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate3.HibernateTransactionManager@70f02c32]; rollback [true]
+Rolled back transaction for test context [DefaultTestContext@2796aeae testClass = ClienteBLImplTest, testInstance = co.mafesa.bl.impl.ClienteBLImplTest@b4711e2, testMethod = testObtener@ClienteBLImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1fa1cab1 testClass = ClienteBLImplTest, locations = '{classpath:configuracion.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+Began transaction (1) for test context [DefaultTestContext@2796aeae testClass = ClienteBLImplTest, testInstance = co.mafesa.bl.impl.ClienteBLImplTest@24ba9639, testMethod = testGuardar@ClienteBLImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1fa1cab1 testClass = ClienteBLImplTest, locations = '{classpath:configuracion.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate3.HibernateTransactionManager@70f02c32]; rollback [true]
+Rolled back transaction for test context [DefaultTestContext@2796aeae testClass = ClienteBLImplTest, testInstance = co.mafesa.bl.impl.ClienteBLImplTest@24ba9639, testMethod = testGuardar@ClienteBLImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1fa1cab1 testClass = ClienteBLImplTest, locations = '{classpath:configuracion.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+Closing org.springframework.context.support.GenericApplicationContext@6276ae34: startup date [Wed May 17 15:00:24 COT 2017]; root of context hierarchy
+Closing Hibernate SessionFactory
+closing
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5ebec15, org.springframework.test.context.support.DirtiesContextTestExecutionListener@21bcffb5, org.springframework.test.context.transaction.TransactionalTestExecutionListener@380fb434, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@668bc3d5]
+Loading XML bean definitions from class path resource [configuracion.xml]
+Refreshing org.springframework.context.support.GenericApplicationContext@6276ae34: startup date [Wed May 17 15:07:29 COT 2017]; root of context hierarchy
+Loaded JDBC driver: com.mysql.jdbc.Driver
+Hibernate Commons Annotations 3.2.0.Final
+Hibernate 3.6.10.Final
+hibernate.properties not found
+Bytecode provider name : javassist
+using JDK 1.4 java.sql.Timestamp handling
+recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+Mapping class: co.mafesa.dto.Cliente -> clientes
+Mapping class: co.mafesa.dto.Usuario -> usuarios
+Hibernate Validator not found: ignoring
+Building new Hibernate SessionFactory
+Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+Using dialect: org.hibernate.dialect.MySQLDialect
+Database ->
+       name : MySQL
+    version : 5.7.14
+      major : 5
+      minor : 7
+Driver ->
+       name : MySQL-AB JDBC Driver
+    version : mysql-connector-java-5.1.22 ( Revision: ${bzr.revision-id} )
+      major : 5
+      minor : 1
+Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+Automatic flush during beforeCompletion(): disabled
+Automatic session close at end of transaction: disabled
+JDBC batch size: 15
+JDBC batch updates for versioned data: disabled
+Scrollable result sets: enabled
+JDBC3 getGeneratedKeys(): enabled
+Connection release mode: auto
+Maximum outer join fetch depth: 2
+Default batch fetch size: 1
+Generate SQL with comments: disabled
+Order SQL updates by primary key: disabled
+Order SQL inserts for batching: disabled
+Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+Using ASTQueryTranslatorFactory
+Query language substitutions: {}
+JPA-QL strict compliance: disabled
+Second-level cache: enabled
+Query cache: disabled
+Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+Optimize cache for minimal puts: disabled
+Structured second-level cache entries: disabled
+Echoing all SQL to stdout
+Statistics: disabled
+Deleted entity synthetic identifier rollback: disabled
+Default entity-mode: pojo
+Named query checking : enabled
+Check Nullability in Core (should be disabled when Bean Validation is on): disabled
+building session factory
+Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@65f8f5ae
+Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@431cd9b2
+Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@38467116
+Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@5b7a7f33
+Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@790da477
+Type registration [blob] overrides previous : org.hibernate.type.BlobType@5c7933ad
+Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@5c7933ad
+Type registration [clob] overrides previous : org.hibernate.type.ClobType@57bc27f5
+Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@57bc27f5
+Not binding factory to JNDI, no JNDI name configured
+Began transaction (1) for test context [DefaultTestContext@2796aeae testClass = ClienteBLImplTest, testInstance = co.mafesa.bl.impl.ClienteBLImplTest@b4711e2, testMethod = testObtener@ClienteBLImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1fa1cab1 testClass = ClienteBLImplTest, locations = '{classpath:configuracion.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate3.HibernateTransactionManager@70f02c32]; rollback [true]
+Rolled back transaction for test context [DefaultTestContext@2796aeae testClass = ClienteBLImplTest, testInstance = co.mafesa.bl.impl.ClienteBLImplTest@b4711e2, testMethod = testObtener@ClienteBLImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1fa1cab1 testClass = ClienteBLImplTest, locations = '{classpath:configuracion.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+Began transaction (1) for test context [DefaultTestContext@2796aeae testClass = ClienteBLImplTest, testInstance = co.mafesa.bl.impl.ClienteBLImplTest@24ba9639, testMethod = testGuardar@ClienteBLImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1fa1cab1 testClass = ClienteBLImplTest, locations = '{classpath:configuracion.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate3.HibernateTransactionManager@70f02c32]; rollback [true]
+Rolled back transaction for test context [DefaultTestContext@2796aeae testClass = ClienteBLImplTest, testInstance = co.mafesa.bl.impl.ClienteBLImplTest@24ba9639, testMethod = testGuardar@ClienteBLImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1fa1cab1 testClass = ClienteBLImplTest, locations = '{classpath:configuracion.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+Closing org.springframework.context.support.GenericApplicationContext@6276ae34: startup date [Wed May 17 15:07:29 COT 2017]; root of context hierarchy
+Closing Hibernate SessionFactory
+closing
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@737996a0, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@61dc03ce, org.springframework.test.context.support.DirtiesContextTestExecutionListener@50f8360d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2cb4c3ab, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@13c78c0b]
+Loading XML bean definitions from class path resource [configuracion.xml]
+Refreshing org.springframework.context.support.GenericApplicationContext@5c7fa833: startup date [Wed May 17 19:26:29 COT 2017]; root of context hierarchy
+Loaded JDBC driver: com.mysql.jdbc.Driver
+Hibernate Commons Annotations 3.2.0.Final
+Hibernate 3.6.10.Final
+hibernate.properties not found
+Bytecode provider name : javassist
+using JDK 1.4 java.sql.Timestamp handling
+recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+Mapping class: co.mafesa.dto.Cliente -> clientes
+Mapping class: co.mafesa.dto.Usuario -> usuarios
+Hibernate Validator not found: ignoring
+Building new Hibernate SessionFactory
+Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+Using dialect: org.hibernate.dialect.MySQLDialect
+Database ->
+       name : MySQL
+    version : 5.7.14
+      major : 5
+      minor : 7
+Driver ->
+       name : MySQL-AB JDBC Driver
+    version : mysql-connector-java-5.1.22 ( Revision: ${bzr.revision-id} )
+      major : 5
+      minor : 1
+Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+Automatic flush during beforeCompletion(): disabled
+Automatic session close at end of transaction: disabled
+JDBC batch size: 15
+JDBC batch updates for versioned data: disabled
+Scrollable result sets: enabled
+JDBC3 getGeneratedKeys(): enabled
+Connection release mode: auto
+Maximum outer join fetch depth: 2
+Default batch fetch size: 1
+Generate SQL with comments: disabled
+Order SQL updates by primary key: disabled
+Order SQL inserts for batching: disabled
+Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+Using ASTQueryTranslatorFactory
+Query language substitutions: {}
+JPA-QL strict compliance: disabled
+Second-level cache: enabled
+Query cache: disabled
+Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+Optimize cache for minimal puts: disabled
+Structured second-level cache entries: disabled
+Echoing all SQL to stdout
+Statistics: disabled
+Deleted entity synthetic identifier rollback: disabled
+Default entity-mode: pojo
+Named query checking : enabled
+Check Nullability in Core (should be disabled when Bean Validation is on): disabled
+building session factory
+Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@26adfd2d
+Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@3336e6b6
+Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@7c3fdb62
+Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@205d38da
+Type registration [clob] overrides previous : org.hibernate.type.ClobType@6950ed69
+Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@6950ed69
+Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@6dd7b5a3
+Type registration [blob] overrides previous : org.hibernate.type.BlobType@6f3187b0
+Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@6f3187b0
+Not binding factory to JNDI, no JNDI name configured
+Began transaction (1) for test context [DefaultTestContext@7216fb24 testClass = UsuarioBLImplTest, testInstance = co.mafesa.bl.impl.UsuarioBLImplTest@2072acb2, testMethod = testObtener@UsuarioBLImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@50ecde95 testClass = UsuarioBLImplTest, locations = '{classpath:configuracion.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate3.HibernateTransactionManager@35a9782c]; rollback [true]
+Rolled back transaction for test context [DefaultTestContext@7216fb24 testClass = UsuarioBLImplTest, testInstance = co.mafesa.bl.impl.UsuarioBLImplTest@2072acb2, testMethod = testObtener@UsuarioBLImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@50ecde95 testClass = UsuarioBLImplTest, locations = '{classpath:configuracion.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+Closing org.springframework.context.support.GenericApplicationContext@5c7fa833: startup date [Wed May 17 19:26:29 COT 2017]; root of context hierarchy
+Closing Hibernate SessionFactory
+closing
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@737996a0, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@61dc03ce, org.springframework.test.context.support.DirtiesContextTestExecutionListener@50f8360d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2cb4c3ab, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@13c78c0b]
+Loading XML bean definitions from class path resource [configuracion.xml]
+Refreshing org.springframework.context.support.GenericApplicationContext@5c7fa833: startup date [Wed May 17 19:26:50 COT 2017]; root of context hierarchy
+Loaded JDBC driver: com.mysql.jdbc.Driver
+Hibernate Commons Annotations 3.2.0.Final
+Hibernate 3.6.10.Final
+hibernate.properties not found
+Bytecode provider name : javassist
+using JDK 1.4 java.sql.Timestamp handling
+recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+Mapping class: co.mafesa.dto.Cliente -> clientes
+Mapping class: co.mafesa.dto.Usuario -> usuarios
+Hibernate Validator not found: ignoring
+Building new Hibernate SessionFactory
+Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+Using dialect: org.hibernate.dialect.MySQLDialect
+Database ->
+       name : MySQL
+    version : 5.7.14
+      major : 5
+      minor : 7
+Driver ->
+       name : MySQL-AB JDBC Driver
+    version : mysql-connector-java-5.1.22 ( Revision: ${bzr.revision-id} )
+      major : 5
+      minor : 1
+Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+Automatic flush during beforeCompletion(): disabled
+Automatic session close at end of transaction: disabled
+JDBC batch size: 15
+JDBC batch updates for versioned data: disabled
+Scrollable result sets: enabled
+JDBC3 getGeneratedKeys(): enabled
+Connection release mode: auto
+Maximum outer join fetch depth: 2
+Default batch fetch size: 1
+Generate SQL with comments: disabled
+Order SQL updates by primary key: disabled
+Order SQL inserts for batching: disabled
+Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+Using ASTQueryTranslatorFactory
+Query language substitutions: {}
+JPA-QL strict compliance: disabled
+Second-level cache: enabled
+Query cache: disabled
+Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+Optimize cache for minimal puts: disabled
+Structured second-level cache entries: disabled
+Echoing all SQL to stdout
+Statistics: disabled
+Deleted entity synthetic identifier rollback: disabled
+Default entity-mode: pojo
+Named query checking : enabled
+Check Nullability in Core (should be disabled when Bean Validation is on): disabled
+building session factory
+Type registration [wrapper_materialized_blob] overrides previous : org.hibernate.type.WrappedMaterializedBlobType@26adfd2d
+Type registration [characters_clob] overrides previous : org.hibernate.type.PrimitiveCharacterArrayClobType@3336e6b6
+Type registration [materialized_blob] overrides previous : org.hibernate.type.MaterializedBlobType@7c3fdb62
+Type registration [materialized_clob] overrides previous : org.hibernate.type.MaterializedClobType@205d38da
+Type registration [clob] overrides previous : org.hibernate.type.ClobType@6950ed69
+Type registration [java.sql.Clob] overrides previous : org.hibernate.type.ClobType@6950ed69
+Type registration [wrapper_characters_clob] overrides previous : org.hibernate.type.CharacterArrayClobType@6dd7b5a3
+Type registration [blob] overrides previous : org.hibernate.type.BlobType@6f3187b0
+Type registration [java.sql.Blob] overrides previous : org.hibernate.type.BlobType@6f3187b0
+Not binding factory to JNDI, no JNDI name configured
+Began transaction (1) for test context [DefaultTestContext@7216fb24 testClass = UsuarioBLImplTest, testInstance = co.mafesa.bl.impl.UsuarioBLImplTest@2072acb2, testMethod = testObtener@UsuarioBLImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@50ecde95 testClass = UsuarioBLImplTest, locations = '{classpath:configuracion.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]; transaction manager [org.springframework.orm.hibernate3.HibernateTransactionManager@35a9782c]; rollback [true]
+Rolled back transaction for test context [DefaultTestContext@7216fb24 testClass = UsuarioBLImplTest, testInstance = co.mafesa.bl.impl.UsuarioBLImplTest@2072acb2, testMethod = testObtener@UsuarioBLImplTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@50ecde95 testClass = UsuarioBLImplTest, locations = '{classpath:configuracion.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+Closing org.springframework.context.support.GenericApplicationContext@5c7fa833: startup date [Wed May 17 19:26:50 COT 2017]; root of context hierarchy
+Closing Hibernate SessionFactory
+closing

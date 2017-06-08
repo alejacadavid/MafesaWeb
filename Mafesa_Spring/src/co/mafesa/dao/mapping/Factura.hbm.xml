@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 6/05/2017 05:20:05 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="co.mafesa.dto.Factura" table="factura">
+        <id name="numFactura" type="int">
+            <column name="NUMFACTURA" />
+            <generator class="assigned" />
+        </id>
+        <property name="fechaFactura" type="java.util.Date">
+            <column name="FECHAFACTURA" />
+        </property>
+        <property name="fechaVencimiento" type="java.util.Date">
+            <column name="FECHAVENCIMIENTO" />
+        </property>
+        <many-to-one name="ordenCompra" class="co.mafesa.dto.OrdenCompra" fetch="join">
+            <column name="NUMORDENCOMPRA" />
+        </many-to-one>
+        <property name="valorImpuestos" type="java.lang.Double">
+            <column name="VALORIMPUESTOS" />
+        </property>
+        <property name="valorDescuentos" type="java.lang.Double">
+            <column name="VALORDESCUENTOS" />
+        </property>
+        <property name="valorTotal" type="java.lang.Double">
+            <column name="VALORTOTAL" />
+        </property>
+        <property name="observaciones" type="java.lang.String">
+            <column name="OBSERVACIONES" />
+        </property>
+    </class>
+</hibernate-mapping>
