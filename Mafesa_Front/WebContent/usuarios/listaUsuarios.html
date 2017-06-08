@@ -1,0 +1,16 @@
+<div>
+	<table border="1" width="100%">
+		<tr>
+			<th height="20%">Identificación</th>
+			<th height="35%">Nombre completo</th>
+			<th height="35%">Correo electrónico</th>
+		</tr>
+		<tr ng-repeat="usuario in usuarios">
+			<td>{{usuario.numeroIdentificacion}}</td>
+			<td>{{usuario.nombres}} {{usuario.apellidos}}</td>
+			<td>{{usuario.email}}</td>
+		</tr>
+	</table>
+<!-- 	Al dar click en el boton Nuevo se llama al metodo Guardar del controlador -->
+	<input type="button" value="Nuevo" ng-click="agregar()"/>
+</div>

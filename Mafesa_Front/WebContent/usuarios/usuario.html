@@ -1,0 +1,47 @@
+<div>
+	<form ng-submit="guardar()">
+		<div>
+		
+			<label>Nombre de usuario</label>
+			<input type="text" placeholder="Nombres de usuario" required ng-model="usuario.nombreUsuario">
+		</div>
+		<div>
+			<label>Tipo de Identificación</label>
+			<input type="text" placeholder="Tipo de Identificación" required ng-model="usuario.tipoId">
+		</div>
+		<div>
+			<label>Número de identificación</label>
+			<input type="text" placeholder="Número de identificación" required ng-model="usuario.numeroIdentificacion">
+		</div>
+		<div>
+			<label>Nombres</label>
+			<input type="text" placeholder="Nombres" required ng-model="usuario.nombres">
+		</div>
+		<div>
+			<label>Apellidos</label>
+			<input type="text" placeholder="Apellidos" required ng-model="usuario.apellidos">
+		</div>
+		<div>
+			<label>Direccion</label>
+			<input type="text" placeholder="Dirección" required ng-model="usuario.direccion">
+		</div>
+		<div>
+			<label>Teléfono</label>
+			<input type="text" placeholder="Teléfono" required ng-model="usuario.telefono">
+		</div>
+		<div>
+			<label>Email</label>
+			<input type="email" placeholder="Email" required ng-model="usuario.email">
+		</div>
+		<div>
+			<label>Contraseña</label>
+			<input type="password" placeholder="Contraseña" required ng-model="usuario.contrasena">
+		</div>
+		<div>
+			<label>Cliente</label>
+			<input type="text" placeholder="Cliente" required ng-model="usuario.cliente">
+		</div>
+		<button type="submit">Guardar</button>
+	</form>
+
+</div>

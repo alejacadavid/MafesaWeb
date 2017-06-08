@@ -1,0 +1,36 @@
+<div>
+	<form ng-submit="guardar()">
+		<div>
+	
+			<label>Numero de orden de compra</label>
+			<input type="text" placeholder="Numero de orden de compra" required ng-model="ordenCompra.numOrdenCompra">
+		</div>
+		<div>
+			<label>Cliente</label>
+			<input type="text" placeholder="Cliente" required ng-model="ordenCompra.cliente">
+		</div>
+		<div>
+			<label>Forma de pago</label>
+			<input type="text" placeholder="Forma de pago" required ng-model="ordenCompra.formaPago">
+		</div>
+		<div>
+			<label>Plazo de entrega</label>
+			<input type="text" placeholder="Plazo de entrega" required ng-model="ordenCompra.plazoEntrega">
+		</div>
+		<div>
+			<label>Fecha de entrega</label>
+			<input type="text" placeholder="Fecha de entrega" required ng-model="ordenCompra.fechaEntrega">
+		</div>
+		<div>
+			<label>Direccion de entrega</label>
+			<input type="text" placeholder="Dirección de entrega" required ng-model="ordenCompra.direccionEntrega">
+		</div>
+		<div>
+			<label>Valor Total</label>
+			<input type="text" placeholder="Valor Total" required ng-model="ordenCompra.valorTotal">
+		</div>
+		
+		<button type="submit">Guardar</button>
+	</form>
+
+</div>

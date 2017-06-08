@@ -1,0 +1,13 @@
+<form name="loginUserForm">
+<h3>Inicio de sesion</h3>
+	<div class="container">
+		<div>
+			<input type="text" required	placeholder="Nombre de usuario" ng-model="nombreUsuario">
+		</div>
+		<div>
+			<input type="password" required placeholder="Contrasena" ng-model="pws">
+		</div>
+		
+		<button type="submit" class="btn btn-primary" ng-click="login()">Ingresar</button>
+	</div>
+</form>
