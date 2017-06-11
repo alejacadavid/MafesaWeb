@@ -2,10 +2,12 @@ package co.mafesa.bl.impl;
 
 import java.util.Date;
 import java.util.List;
+
 import co.mafesa.bl.UsuarioBL;
 import co.mafesa.dao.ClienteDAO;
 import co.mafesa.dao.UsuarioDAO;
 import co.mafesa.dto.Usuario;
+import co.mafesa.encode.Cifrar;
 import co.mafesa.exception.MyException;
 import co.mafesa.util.Validaciones;
 
@@ -47,9 +49,9 @@ public class UsuarioBLImpl implements UsuarioBL {
 			throw new MyException("Login o contraseña incorrecta");
 		}
 		
-		//pwsCifrado = Cifrar.encrypt(pws);
+		pwsCifrado = Cifrar.encrypt(pws);
 		
-		if(!usuario.getContraseña().equals(pws)){
+		if(!usuario.getContraseña().equals(pwsCifrado)){
 			throw new MyException("Login o contraseña incorrecta");
 		}
 	}
