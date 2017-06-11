@@ -76,7 +76,7 @@ public class DetalleOrdenCompraBLImpl implements DetalleOrdenCompraBL {
 			throw new MyException("Las observaciones no puede ser vacia");
 		}
 
-		if(detalleOrdenCompraDAO.get(Integer.parseInt(numero))!= null){
+		if(detalleOrdenCompraDAO.get(numero)!= null){
 			throw new MyException("Ya existe un detalle con este número para la orden de compra en el sistema");
 		}
 		
@@ -111,7 +111,7 @@ public class DetalleOrdenCompraBLImpl implements DetalleOrdenCompraBL {
 		if(numero == null || numero.isEmpty()){
 			throw new MyException("El número del detalle de la orden de compra no puede ser vacío");
 		}
-		detalleOrdenCompra = detalleOrdenCompraDAO.get(Integer.parseInt(numero));
+		detalleOrdenCompra = detalleOrdenCompraDAO.get(numero);
 		if(detalleOrdenCompra==null){
 			throw new MyException("El detalle de la orden de compra a eliminar no existe en el sistema");
 		}
@@ -157,7 +157,7 @@ public class DetalleOrdenCompraBLImpl implements DetalleOrdenCompraBL {
 		if(servicio == null){
 			throw new MyException("El servicio a asociar no existe en el sistema");
 		}
-		detalleOrdenCompra = detalleOrdenCompraDAO.get(Integer.parseInt(numero));
+		detalleOrdenCompra = detalleOrdenCompraDAO.get(numero);
 
 		if(detalleOrdenCompra==null){
 			throw new MyException("El detalle de la orden de compra a modificar no existe en el sistema");
@@ -174,4 +174,10 @@ public class DetalleOrdenCompraBLImpl implements DetalleOrdenCompraBL {
 		
 	}
 
+	public DetalleOrdenCompra obtenerDetalle(String numOrdenCompra) throws MyException {
+		DetalleOrdenCompra detalleOrdenCompra = null;
+		detalleOrdenCompra = detalleOrdenCompraDAO.get(numOrdenCompra);
+		return detalleOrdenCompra;
+		
+	}
 }

@@ -54,4 +54,11 @@ public interface DetalleOrdenCompraBL {
 	public void modificarDetalleOrdenCompra(String numero, String numOrdenCompra, String refServicio, String cantidad,
 			String valor, String observaciones) throws MyException;
 	
+	/**
+	 * Retorna la lista de los detalle de una orden de compra
+	 * @return lista de detalles 
+	 * @throws MyException cuando hay un error obteniendo la lista
+	 */
+	public DetalleOrdenCompra obtenerDetalle(String numeroOrden) throws MyException;
+	
 }

@@ -8,8 +8,8 @@
             <column name="NUMORDENCOMPRA" not-null="true"/>
             <generator class="assigned" />
         </id>
-        <many-to-one name="cliente" class="co.mafesa.dto.Cliente" fetch="join">
-        	<column name="CLIENTE"></column>
+        <many-to-one name="cliente" class="co.mafesa.dto.Cliente" fetch="join" lazy="false">
+        	<column name="CLIENTE" not-null="true"></column>
         </many-to-one>
         <property name="formaPago" type="java.lang.String">
             <column name="FORMAPAGO" />
@@ -26,13 +26,13 @@
         <property name="valorTotal" type="java.lang.Double">
             <column name="VALORTOTAL" />
         </property>
-        <many-to-one name="usuarioCrea" class="co.mafesa.dto.Usuario" fetch="select" lazy="false">
-            <column name="USUARIOCREA" />
+        <many-to-one name="usuarioCrea" class="co.mafesa.dto.Usuario" fetch="join" lazy="false">
+            <column name="USUARIOCREA" not-null="true"/>
         </many-to-one>
         <property name="fechaCreacion" type="java.util.Date">
             <column name="FECHACREACION" />
         </property>
-        <many-to-one name="usuarioModifica" class="co.mafesa.dto.Usuario" fetch="select" lazy="false">
+        <many-to-one name="usuarioModifica" class="co.mafesa.dto.Usuario" fetch="join" >
             <column name="USUARIOMODIFICA" />
         </many-to-one>
         <property name="fechaModifica" type="java.util.Date">
@@ -41,17 +41,17 @@
         <property name="Eliminado" type="java.lang.Boolean">
             <column name="ELIMINADO" />
         </property>
-        <many-to-one name="usuarioElimina" class="co.mafesa.dto.Usuario" fetch="select" lazy="false"> 
+        <many-to-one name="usuarioElimina" class="co.mafesa.dto.Usuario" fetch="join"> 
             <column name="USUARIOELIMINA" />
         </many-to-one>
         <property name="fechaElimina" type="java.util.Date">
             <column name="FECHAELIMINA" />
         </property>
-        <set name="detalleOrdenCompra" fetch="join" lazy="false">
+        <set name="detalleOrdenCompra" fetch="join">
         	<key column="NumOrdenCompra" ></key>
         	<one-to-many class="co.mafesa.dto.DetalleOrdenCompra"/>
         </set>
-        <set name="estadoOC" fetch="join" lazy="false">
+        <set name="estadoOC" fetch="join">
         	<key column="IdOrdenCompra" ></key>
         	<one-to-many class="co.mafesa.dto.EstadoOC"/>
         </set>

@@ -3,6 +3,7 @@ package co.mafesa.dao;
 import java.util.List;
 
 
+
 import co.mafesa.dto.DetalleOrdenCompra;
 import co.mafesa.dto.Estado;
 import co.mafesa.exception.MyException;
@@ -23,7 +24,7 @@ public interface DetalleOrdenCompraDAO {
 	 * @return estado
 	 * @throws MyException cuando hay un error consultando
 	 */
-	public DetalleOrdenCompra get(int numero) throws MyException;
+	public DetalleOrdenCompra get(String numero) throws MyException;
 
 	/**
 	 * Modifca los datos del estado de una orden de compra en la base de datos
@@ -38,5 +39,6 @@ public interface DetalleOrdenCompraDAO {
 	 * @throws MyException  cuando hay un error eliminando la información
 	 */
 	public void delete(DetalleOrdenCompra detalleOrdenCompra) throws MyException;
-
+	
+	
 }

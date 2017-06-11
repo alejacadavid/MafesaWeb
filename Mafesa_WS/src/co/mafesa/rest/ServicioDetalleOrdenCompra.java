@@ -38,7 +38,7 @@ public class ServicioDetalleOrdenCompra {
 	 * @throws RemoteException cuando hay un error retornando la lista de detalles
 	 */
 	@Path("list")
-	@Produces(MediaType.APPLICATION_XML)
+	@Produces(MediaType.APPLICATION_JSON)
 	@GET
 	public List<DetalleOrdenCompra> obtener() throws RemoteException{
 		List<DetalleOrdenCompra> detalles = new ArrayList<DetalleOrdenCompra>();
@@ -136,6 +136,17 @@ public class ServicioDetalleOrdenCompra {
 		return "";
 	}
 	
+	@Produces(MediaType.APPLICATION_JSON)
+	@GET
+	public String verDetalle(@QueryParam("numOrdenCompra")String numOrdenCompra) throws RemoteException{
+		try{
+			detalleOrdenCompraService.obtenerDetalle(numOrdenCompra);
+		}catch(MyException e){
+			e.getMessage();
+		}
+		
+		return "";
+	}
 	
 	
 }

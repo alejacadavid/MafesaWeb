@@ -36,8 +36,8 @@
         <property name="fechaCreacion" type="java.util.Date">
             <column name="FECHACREACION" />
         </property>
-        <many-to-one name="cliente" class="co.mafesa.dto.Cliente" fetch="join" >
-        	<column name="CLIENTE"></column>
+        <many-to-one name="cliente" class="co.mafesa.dto.Cliente" fetch="join" lazy="false">
+        	<column name="CLIENTE" not-null="true"></column>
         </many-to-one>
       
         

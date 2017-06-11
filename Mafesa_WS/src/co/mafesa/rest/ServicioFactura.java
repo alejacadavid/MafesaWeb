@@ -38,7 +38,7 @@ public class ServicioFactura {
 	 * @throws RemoteException cuando hay un error retornando los estados
 	 */
 	@Path("list")
-	@Produces(MediaType.TEXT_XML)
+	@Produces(MediaType.APPLICATION_JSON)
 	@GET
 	public List<Factura> obtener() throws RemoteException{
 		List<Factura> facturas = new ArrayList<Factura>();

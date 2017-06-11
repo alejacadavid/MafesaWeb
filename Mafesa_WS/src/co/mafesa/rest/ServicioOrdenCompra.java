@@ -39,7 +39,7 @@ public class ServicioOrdenCompra {
 	 * @throws RemoteException cuando un error retornando la lista de ordenes de compra
 	 */
 	@Path("list")
-	@Produces(MediaType.APPLICATION_XML)
+	@Produces(MediaType.APPLICATION_JSON)
 	@GET
 	public List<OrdenCompra> obtener() throws RemoteException{
 		List<OrdenCompra> ordenesCompra = new ArrayList<OrdenCompra>();
@@ -58,7 +58,7 @@ public class ServicioOrdenCompra {
 					ordenCompraWS.setValorTotal(ordenCompra.getValorTotal());
 					ordenCompraWS.setUsuarioCrea(ordenCompra.getUsuarioCrea());
 					ordenCompraWS.setFechaCreacion(ordenCompra.getFechaCreacion());
-					
+				
 					
 					ordenesCompra.add(ordenCompraWS);
 				}
@@ -92,12 +92,12 @@ public class ServicioOrdenCompra {
 			@QueryParam("valorTotal")String valorTotal, @QueryParam("usuarioCrea")String usuarioCrea) throws RemoteException, NumberFormatException, ParseException{
 		try{
 			ordenCompraService.registrarOrdenCompra(numOrdenCompra, cliente, formaPago, plazoEntrega, fechaEntrega, direccionEntrega,valorTotal, usuarioCrea);
-			return "Orden de compra guardada correctamente";
+			
 		}catch(MyException e){
 			return e.getMessage();
 		}
 		
-		
+		return "";
 	}
 	
 	/**
@@ -121,7 +121,7 @@ public class ServicioOrdenCompra {
 	public String modificarOrdenCOmpra(@QueryParam("numOrdenCompra")String numOrdenCompra, @QueryParam("cliente")String cliente,
 			@QueryParam("formaPago")String formaPago, @QueryParam("plazoEntrega")String plazoEntrega, 
 			@QueryParam("fechaEntrega")String fechaEntrega, @QueryParam("direccionEntrega")String direccionEntrega, 
-			@QueryParam("valorTotal")String valorTotal, @QueryParam("usuarioCrea")String usuarioModifica) throws RemoteException, ParseException{
+			@QueryParam("valorTotal")String valorTotal, @QueryParam("usuarioModifica")String usuarioModifica) throws RemoteException, ParseException{
 		try{
 			ordenCompraService.modificarOrdenCompra(numOrdenCompra, cliente, formaPago, plazoEntrega, fechaEntrega, direccionEntrega, valorTotal, usuarioModifica);
 			
@@ -161,7 +161,7 @@ public class ServicioOrdenCompra {
 	 * @throws RemoteException cuando hay un error buscando una orden de compra
 	 */
 	@Path("search")
-	@Produces(MediaType.APPLICATION_XML)
+	@Produces(MediaType.APPLICATION_JSON)
 	@GET
 	public OrdenCompra buscarOrdenCompra(@QueryParam("numOrdenCompra")String numOrdenCompra) throws RemoteException{
 		OrdenCompra ordenCompra = new OrdenCompra();
@@ -188,7 +188,7 @@ public class ServicioOrdenCompra {
 	 * @throws RemoteException cuando hay un error ingresando un detalle
 	 */
 	@Path("detalle")
-	@Produces(MediaType.TEXT_PLAIN)
+	@Produces(MediaType.APPLICATION_JSON)
 	@POST
 	public String ingresarDetalle(@QueryParam("numero")String numero, @QueryParam("numOrdenCompra")String numOrdenCompra,
 			@QueryParam("refServicio")String refServicio, @QueryParam("cantidad")String cantidad, 

@@ -84,12 +84,12 @@ public class ServicioEstadoOC {
 			@QueryParam("cantidadProcesada")String cantidadProcesada, @QueryParam("ordenCompra")String ordenCompra) throws RemoteException{
 		try{
 			estadoOCService.insertarEstadoOC(numero, estado, usuarioEstado, cantidadPendiente, cantidadProcesada, ordenCompra);
-			return "Cliente guardado correctamente";
+			
 		}catch(MyException e){
 			return e.getMessage();
 		}
 		
-		
+		return "";
 	}
 	
 	/**
@@ -106,7 +106,7 @@ public class ServicioEstadoOC {
 	@Path("update")
 	@Produces(MediaType.TEXT_PLAIN)
 	@PUT
-	public String actualizarCliente(@QueryParam("numero")String numero, @QueryParam("estado")String estado,
+	public String actualizarEstado(@QueryParam("numero")String numero, @QueryParam("estado")String estado,
 			@QueryParam("usuarioEstado")String usuarioEstado, @QueryParam("cantidadPendiente")String cantidadPendiente, 
 			@QueryParam("cantidadProcesada")String cantidadProcesada, @QueryParam("ordenCompra")String ordenCompra) throws RemoteException{
 		try{

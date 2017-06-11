@@ -38,10 +38,10 @@ public class UsuarioBLImpl implements UsuarioBL {
 	}
 
 	@Override
-	public void autenticar(String nombreUsuario, String pws) throws MyException {
+	public void autenticar(String login, String pws) throws MyException {
 		Usuario usuario = null;
 		String pwsCifrado = null;
-		usuario = usuarioDAO.get(nombreUsuario);
+		usuario = usuarioDAO.get(login);
 		
 		if(usuario == null){
 			throw new MyException("Login o contraseña incorrecta");

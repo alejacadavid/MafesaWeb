@@ -8,11 +8,11 @@
             <column name="NUMERO" />
             <generator class="assigned" />
         </id>
-        <many-to-one name="numOrdenCompra" class="co.mafesa.dto.OrdenCompra" fetch="select">
-            <column name="NUMORDENCOMPRA" />
+        <many-to-one name="numOrdenCompra" class="co.mafesa.dto.OrdenCompra" fetch="join">
+            <column name="NUMORDENCOMPRA" not-null="true"/>
         </many-to-one>
         <many-to-one name="refServicio" class="co.mafesa.dto.Servicio" fetch="join">
-            <column name="REFSERVICIO" />
+            <column name="REFSERVICIO" not-null="true" />
         </many-to-one>
         <property name="cantidad" type="int">
             <column name="CANTIDAD" />

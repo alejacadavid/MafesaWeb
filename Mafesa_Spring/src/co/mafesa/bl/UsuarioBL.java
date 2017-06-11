@@ -20,7 +20,7 @@ public interface UsuarioBL {
 	 * @param pws contraseña
 	 * @throws MyException cuando hay errores en la autenticación 
 	 */
-	public void autenticar(String nombreUsuario, String pws) throws MyException;
+	public void autenticar(String login, String pws) throws MyException;
 	
 	/**
 	 * Permite guardar usuarios

@@ -29,12 +29,12 @@ public class UsuarioDAOHibernate implements UsuarioDAO {
 	
 	
 	@Override
-	public Usuario get(String nombreUsuario) throws MyException {
+	public Usuario get(String username) throws MyException {
 		Session session = null;
 		Usuario usuario = null;
 		try{
 			session = sessionFactory.getCurrentSession();
-			usuario = (Usuario)session.get(Usuario.class, nombreUsuario);
+			usuario = (Usuario)session.get(Usuario.class, username);
 		
 		}catch(HibernateException e){
 			throw new MyException("Ocurrio un error consultando el usuario",e);

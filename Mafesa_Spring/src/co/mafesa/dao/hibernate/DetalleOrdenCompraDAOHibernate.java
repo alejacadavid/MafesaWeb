@@ -9,6 +9,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 import co.mafesa.dao.DetalleOrdenCompraDAO;
+import co.mafesa.dto.Cliente;
 import co.mafesa.dto.DetalleOrdenCompra;
 import co.mafesa.exception.MyException;
 
@@ -46,7 +47,7 @@ public class DetalleOrdenCompraDAOHibernate implements DetalleOrdenCompraDAO {
 	}
 
 	@Override
-	public DetalleOrdenCompra get(int numero) throws MyException {
+	public DetalleOrdenCompra get(String numero) throws MyException {
 		Session session = null;
 		DetalleOrdenCompra detalleOrdenCompra = null;
 			
@@ -110,4 +111,5 @@ public class DetalleOrdenCompraDAOHibernate implements DetalleOrdenCompraDAO {
 		return detallesOrdenCompra;
 	}
 
+	
 }

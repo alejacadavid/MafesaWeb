@@ -9,10 +9,10 @@
             <generator class="assigned" />
         </id>
         <many-to-one name="estado" class="co.mafesa.dto.Estado" fetch="join">
-            <column name="ESTADO" />
+            <column name="ESTADO" not-null="true"/>
         </many-to-one>
         <many-to-one name="usuarioEstado" class="co.mafesa.dto.Usuario" fetch="join">
-            <column name="USUARIOESTADO" />
+            <column name="USUARIOESTADO" not-null="true" />
         </many-to-one>
         
         <property name="cantidadPendiente" type="int">
@@ -25,7 +25,7 @@
             <column name="FECHAESTADO" />
         </property>
         <many-to-one name="idOrdenCompra" class="co.mafesa.dto.OrdenCompra" fetch="join">
-            <column name="IDORDENCOMPRA" />
+            <column name="IDORDENCOMPRA" not-null="true"/>
         </many-to-one>
     </class>
 </hibernate-mapping>

@@ -1,0 +1,36 @@
+<ng-include src="'../cabecera.html'"></ng-include>
+<div class="panel panel-default">
+  <div class="panel-heading">
+  <h2>Listado de facturas</h2>
+  <input type="button" value="Generar Factura"  class="btn btn-danger" ng-click="agregar()"/>
+  </div>
+  <div class="panel-body">
+
+<div>
+	<table class="table table-hover" width="100%">
+		<tr>
+			<th height="10%" class="text-center">Numero</th>
+			<th height="15%" class="text-center">Fecha y hora creación</th>
+			<th height="15%" class="text-center">Orden de compra</th>
+			<th height="25%" class="text-center">Cliente</th>
+			<th height="15%" class="text-center">Valor</th>
+	
+			<th height="35%" class="text-center">Opciones</th>
+		</tr>
+		<tr ng-repeat="factura in facturas" ng-model="checked">
+			
+			<td>{{factura.numFactura}}</td>
+			<td>{{factura.fechaFactura}}</td>
+			<td>{{factura.numOrdenCompra}}</td>
+			<td>{{factura.numOrdenCompra.cliente.numero}}</td>
+			<td>{{factura.valorTotal}}</td>
+			<td class="text-center">
+			<button type="button" class="btn btn-primary" ng-click="editar(factura.numero)">Editar</button>
+			<button type="button" class="btn btn-danger" ng-click="eliminar(factura.numero)">Eliminar</button></td>
+			</a>
+		</tr>
+	</table>
+<!-- 	Al dar click en el boton Nuevo se llama al metodo Guardar del controlador -->
+	
+</div>
+</div>

@@ -158,16 +158,16 @@ public class ServicioUsuario {
 	
 	/**
 	 * Metodo que permite autenticar un usuario
-	 * @param nombreUsuario nombre de usuario
+	 * @param login nombre de usuario
 	 * @param contrasena contraseña
 	 * @return mensaje de confirmacion
 	 */
 	@Path("login")
 	@Produces(MediaType.TEXT_PLAIN)
 	@GET
-	public String validar(@QueryParam("nombreUsuario")String nombreUsuario, @QueryParam("contrasena")String contrasena){
+	public String validar(@QueryParam("login")String login, @QueryParam("pws")String pws){
 		try{
-			usuarioService.autenticar(nombreUsuario, contrasena);
+			usuarioService.autenticar(login, pws);
 		}catch(MyException e){
 			return e.getMessage();
 		}
